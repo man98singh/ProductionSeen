@@ -33,7 +33,7 @@ import { bootstrapCameraKit } from '@snap/camera-kit';
         recorder = new MediaRecorder(canvasStream);
 
         recorder.ondataavailable = event => data.push(event.data);
-        recorder.onerror = (event) => {
+        recorder.onerror = () => {
             console.error('Recorder Error:');
         };
         recorder.onstop = () => {
