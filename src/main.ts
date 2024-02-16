@@ -56,8 +56,28 @@ import { bootstrapCameraKit } from '@snap/camera-kit';
         recorder.start();
         console.log('Recording started');
     }
-
+    
     const startButton = document.createElement('button');
+    const style = document.createElement('style');
+style.textContent = `
+  .start-button, .stop-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+  }
+
+  @media (max-width: 600px) {
+    .start-button, .stop-button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+`;
+document.head.appendChild(style);
+
+startButton.className = 'start-button';
+
+    startButton.className ='start-button'
     startButton.textContent = 'Record';
     document.body.appendChild(startButton);
 
