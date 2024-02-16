@@ -2,14 +2,13 @@ import { bootstrapCameraKit } from '@snap/camera-kit';
 
 (async function () {
     const cameraKit = await bootstrapCameraKit({ apiToken: 'eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNzA1MTUxMzg0LCJzdWIiOiI3NDRiZTczYS1iODlmLTRkYzAtYjk1MC0yMDIyNGY2NjJjMGF-U1RBR0lOR35iZGM2ZTgyOS1iYTdhLTRmNDgtOGVlMC0wZWMyYjFlMjE1ZTYifQ.6HxXxLjUNOD9IV73x8tFcF11P4jDYGeD--7kW02iGho' });
-    const liveRenderTarget = document.getElementById('canvas');
+    const liveRenderTarget = document.getElementById('canvas') as HTMLCanvasElement;
     const session = await cameraKit.createSession({ liveRenderTarget });
 
-    const manish = document.createElement('input');
     // Set video constraints to 1280x720 (16:9 aspect ratio)
     const videoConstraints = {
-        width: { ideal: 1920 },
-        height: { ideal: 1080 },
+        width: { ideal: 720 },
+        
         aspectRatio: 16 / 9
     };
 
@@ -26,8 +25,8 @@ import { bootstrapCameraKit } from '@snap/camera-kit';
     );
     await session.applyLens(lens);
 
-    let recorder;
-    let data = [];
+    let recorder:MediaRecorder;
+    let data:Blob[] = [];
 
     function startRecording() {
         const canvasStream = liveRenderTarget.captureStream(30); // 30 FPS
@@ -35,7 +34,7 @@ import { bootstrapCameraKit } from '@snap/camera-kit';
 
         recorder.ondataavailable = event => data.push(event.data);
         recorder.onerror = (event) => {
-            console.error('Recorder Error:', event.error);
+            console.error('Recorder Error:');
         };
         recorder.onstop = () => {
             console.log('Recording stopped');
