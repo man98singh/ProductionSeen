@@ -58,7 +58,7 @@ import { bootstrapCameraKit } from '@snap/camera-kit';
     }
 
     const startButton = document.createElement('button');
-    startButton.textContent = 'Start Recording';
+    startButton.textContent = 'Record';
     document.body.appendChild(startButton);
 
     startButton.addEventListener('click', () => {
@@ -66,7 +66,7 @@ import { bootstrapCameraKit } from '@snap/camera-kit';
     });
 
     const stopButton = document.createElement('button');
-    stopButton.textContent = 'Stop Recording';
+    stopButton.textContent = 'Stop';
     document.body.appendChild(stopButton);
 
     stopButton.addEventListener('click', () => {
