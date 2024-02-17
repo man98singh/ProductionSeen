@@ -14,6 +14,9 @@
   },
   "dependencies": {
     "@snap/camera-kit": "^0.15.0",
+    "@uppy/core": "^3.8.0",
+    "@uppy/dashboard": "^3.7.1",
+    "@uppy/tus": "^3.5.0",
     "latest": "^0.2.0"
   }
 }

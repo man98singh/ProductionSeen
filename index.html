@@ -6,7 +6,29 @@
     <title>Seen AWS</title>
   </head>
   <body>
+    <input type="file" id="videoInput" accept="video/*">
+<video id="videoPreview" controls width="250"></video>
+<!-- 
+<script>
+  document.getElementById('videoInput').addEventListener('change', function(event) {
+    const file = event.target.files[0]; // Get the first file selected by the user
+    if (file) {
+      const reader = new FileReader(); // Create a new instance of FileReader
+
+      reader.onload = function(e) {
+        // Set the source of the video element to the file's data URL
+        document.getElementById('videoPreview').src = e.target.result;
+      };
+
+      reader.readAsDataURL(file); // Read the file as a Data URL
+    }
+  });
+</script> -->
+
+
+
     <canvas id="canvas"></canvas>
     <script type="module" src="/src/main.ts"></script>
+    
   </body>
 </html>
