@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "target": "ES2020",
+      "module": "ESNext",
+      "outDir": "./server",
+      "rootDir": "./src/backend",
+      "esModuleInterop": true,
+      "strict": true,
+      "skipLibCheck": true,
+      "moduleResolution": "node"
+    },
+    "include": ["src/backend/**/*"]
+  }
+  
