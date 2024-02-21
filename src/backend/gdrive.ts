@@ -6,7 +6,7 @@ import path from 'path';
 const CLIENT_ID = '630271564715-5dkam4196e9vlqr1sqa150jen685rheh.apps.googleusercontent.com';
 const CLIENT_SECRET = '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';
 const REDIRECT_URI = 'https://developers.google.com/oauthplayground';
-const REFRESH_TOKEN = '1//04Kmv_uCyT4CeCgYIARAAGAQSNwF-L9Irun0zn2lF9RQegyDJ-4Uy67RpZLxyP6RBLnD7KNV-O6UXcgpSGtsX04ZBHqtMDRRdNAE';
+const REFRESH_TOKEN = '1//041R_PJCTRX_6CgYIARAAGAQSNwF-L9IrBQz1X4XYgFsqvj_fK4fNiaLHou7EU95Lpp8pLAns9l3V1z7udhUWmrpZuchM-a5udWM';
 
 const oauth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI);
 oauth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
