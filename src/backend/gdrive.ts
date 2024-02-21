@@ -5,7 +5,7 @@ import path from 'path';
 // Google API client setup
 const CLIENT_ID = '630271564715-5dkam4196e9vlqr1sqa150jen685rheh.apps.googleusercontent.com';
 const CLIENT_SECRET = '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';
-const REDIRECT_URI = 'production-seen.vercel.app';
+const REDIRECT_URI = 'https://production-seen.vercel.app/';
 const REFRESH_TOKEN = '1//041R_PJCTRX_6CgYIARAAGAQSNwF-L9IrBQz1X4XYgFsqvj_fK4fNiaLHou7EU95Lpp8pLAns9l3V1z7udhUWmrpZuchM-a5udWM';
 
 const oauth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI);
