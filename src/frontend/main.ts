@@ -1,7 +1,7 @@
 import { bootstrapCameraKit } from '@snap/camera-kit';
 
 (async function () {
-    const cameraKit = await bootstrapCameraKit({ apiToken: ' });
+    const cameraKit = await bootstrapCameraKit({ apiToken: '' });
     const liveRenderTarget = document.getElementById('canvas') as HTMLCanvasElement;
     const session = await cameraKit.createSession({ liveRenderTarget });
 
